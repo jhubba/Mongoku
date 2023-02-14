@@ -14,10 +14,10 @@ WORKDIR /mongoku
 
 COPY ./ /mongoku
 
-RUN npm install -g typescript@4.5.4 @angular/cli \
+RUN npm install -g typescript@4.9.5 @angular/cli \
       && npm ci \
       && cd app \
-      && npm ci \
+      && npm i \
       && ng build --configuration production \
       && cd .. \
       && tsc
